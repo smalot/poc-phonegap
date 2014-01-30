@@ -41,8 +41,8 @@
 	<div role="main" class="ui-content" >
 		<h2>Panel One</h2>
 
-		<p><a href="#defaultpanel" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Toggle panel</a></p>
-		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>		
+		<!--p><a href="#defaultpanel" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Toggle panel</a></p>
+		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p-->
 	</div><!-- /content -->
 	
 	<div class="scroll-pane" data-role="panel" id="defaultpanel" data-display="overlay" data-position="right" data-swipe-close="false" data-dismissible="false">
@@ -125,8 +125,8 @@
 				$('#one .ui-content').tubular({ videoId: 'ab0TSkLe-E0', start: 3 }); // where idOfYourVideo is the YouTube ID.
 			});
 			
-			$('#one').hammer().on('touch', '', function(event) {
-				//$('#defaultpanel').panel('toggle');
+			$('body').hammer().on('touch', '', function(event) {
+				$('#defaultpanel').panel('toggle');
 				//alert('test');
 			});
 			
