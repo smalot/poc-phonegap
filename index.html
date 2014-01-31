@@ -25,7 +25,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jqm-demos.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
@@ -118,7 +118,10 @@
         <!--script type="text/javascript" src="http://demos.jquerymobile.com/1.4.0/_assets/js/index.js"></script-->
         <!--script type="text/javascript" src="js/index.js"></script-->
         <script type="text/javascript">
-			$(function() {
+			//navigator.splashscreen.hide();
+			app.initialize();
+			
+			/*$(function() {
 				$('#defaultpanel').jScrollPane();
 				$('#defaultpanel').panel({ animate: true, positionFixed: true });
 				$('#defaultpanel').panel('open');
@@ -132,10 +135,9 @@
 			
 			$('#defaultpanel').hammer().on('touch', '', function(event) {
 				event.stopPropagation();
-			});
+			});*/
 			
-            navigator.splashscreen.hide();
-			app.initialize();
+            
         </script>
     </body>
 </html>
