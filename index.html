@@ -41,6 +41,7 @@
 	<div role="main" class="ui-content" >
 		<h2>Panel One</h2>
 
+		<div id="video" style="width: 200px; height: 150px"></div>
 		<!--p><a href="#defaultpanel" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Toggle panel</a></p>
 		<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p-->
 	</div><!-- /content -->
@@ -115,16 +116,19 @@
 		<script type="text/javascript" src="js/jquery.hammer.min.js"></script>
 		<script type="text/javascript" src="js/jquery.tubular.1.0.js"></script> 
         <script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="video.js"></script>
         <!--script type="text/javascript" src="http://demos.jquerymobile.com/1.4.0/_assets/js/index.js"></script-->
         <!--script type="text/javascript" src="js/index.js"></script-->
         <script type="text/javascript">
 			//navigator.splashscreen.hide();
 			
 			$(function() {
+				window.plugins.videoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
+			
 				$('#defaultpanel').jScrollPane();
 				$('#defaultpanel').panel({ animate: true, positionFixed: true });
 				$('#defaultpanel').panel('open');
-				$('#one .ui-content').tubular({ videoId: 'ab0TSkLe-E0', start: 3 }); // where idOfYourVideo is the YouTube ID.
+				//$('#one').tubular({ videoId: 'ab0TSkLe-E0', start: 3 }); // where idOfYourVideo is the YouTube ID.
 			});
 			
 			$('body').hammer().on('touch', '', function(event) {
