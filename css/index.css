@@ -18,8 +18,8 @@ html .ui-panel-page-container-a {
 }
 
 #one {
-	/*background-image: url(../img/background.jpg);
-	background-size : cover;*/
+	background-image: url(../img/background.jpg);
+	background-size : cover;
 }
 
 #defaultpanel {
